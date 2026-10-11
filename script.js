@@ -1,5 +1,5 @@
-// ⚠️ GANTI INI dengan URL Google Apps Script kamu (nanti setelah setup)
-const SCRIPT_URL = 'https://script.google.com/macros/s/XXXXX/exec';
+// URL Google Apps Script
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxbNI7GLac-pafKkAG1bXlPeoVWFW8DA6z6-wWpXE0679aJjgXGGWefV_e-5UzUzCtlqA/exec';
 
 // Tampilkan tanggal hari ini
 const tanggalEl = document.getElementById('tanggal');
@@ -46,7 +46,7 @@ form.addEventListener('submit', async (e) => {
   submitBtn.textContent = 'Mengirim...';
 
   try {
-    const response = await fetch(SCRIPT_URL, {
+    await fetch(SCRIPT_URL, {
       method: 'POST',
       mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
@@ -67,7 +67,7 @@ form.addEventListener('submit', async (e) => {
     console.error(error);
   } finally {
     submitBtn.disabled = false;
-    submitBtn.textContent = 'Kirim Absensi';
+    submitBtn.textContent = '📤 Kirim Absensi';
   }
 });
 
