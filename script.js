@@ -1,5 +1,5 @@
 // URL Google Apps Script
-const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxbNI7GLac-pafKkAG1bXlPeoVWFW8DA6z6-wWpXE0679aJjgXGGWefV_e-5UzUzCtlqA/exec';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyRrRh58xTlHuGsgcv_uIiMPe-GkWL2KLTzb_vTWV2uDwPkpz7IDVeAOIPVVboOWPiN/exec';
 
 // Tampilkan tanggal hari ini
 const tanggalEl = document.getElementById('tanggal');
