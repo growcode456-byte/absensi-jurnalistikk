@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Absensi Eskul Jurnalistik</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📰 Absensi Eskul Jurnalistik</h1>
+      <p class="subtitle" id="tanggal"></p>
+    </header>
+
+    <form id="formAbsen">
+      <div class="form-group">
+        <label for="nama">Nama Lengkap</label>
+        <input type="text" id="nama" placeholder="Masukkan nama kamu..." required>
+      </div>
+
+      <div class="form-group">
+        <label for="kelas">Kelas</label>
+        <select id="kelas" required>
+          <option value="">-- Pilih Kelas --</option>
+          <option value="X IPA 1">X IPA 1</option>
+          <option value="X IPA 2">X IPA 2</option>
+          <option value="X IPS 1">X IPS 1</option>
+          <option value="X IPS 2">X IPS 2</option>
+          <option value="XI IPA 1">XI IPA 1</option>
+          <option value="XI IPA 2">XI IPA 2</option>
+          <option value="XI IPS 1">XI IPS 1</option>
+          <option value="XI IPS 2">XI IPS 2</option>
+          <option value="XII IPA 1">XII IPA 1</option>
+          <option value="XII IPA 2">XII IPA 2</option>
+          <option value="XII IPS 1">XII IPS 1</option>
+          <option value="XII IPS 2">XII IPS 2</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Status Kehadiran</label>
+        <div class="status-buttons">
+          <button type="button" class="status-btn hadir" data-status="Hadir">✅ Hadir</button>
+          <button type="button" class="status-btn izin" data-status="Izin">📝 Izin</button>
+          <button type="button" class="status-btn sakit" data-status="Sakit">🤒 Sakit</button>
+          <button type="button" class="status-btn alpha" data-status="Alpha">❌ Alpha</button>
+        </div>
+        <input type="hidden" id="status" required>
+      </div>
+
+      <div class="form-group">
+        <label for="keterangan">Keterangan (opsional)</label>
+        <input type="text" id="keterangan" placeholder="Alasan izin/sakit...">
+      </div>
+
+      <button type="submit" class="submit-btn" id="submitBtn">Kirim Absensi</button>
+    </form>
+
+    <div id="pesan" class="pesan"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
